@@ -14,21 +14,18 @@ class HashStorage {
     }
 
     deleteValue(key){
-        delete this.hash[key];
-        if (key in this.hash) {
-            return false;
+        if (key in this.hash){
+            delete this.hash[key];
+            return true;
         }
-        return true;
+        return false;
     }
 
     getKeys() {
         return Object.keys(this.hash);
     }
 }
-// let drink = new HashStorage;
-// drink.addValue('name', 'Margarita');
-// console.log(drink);
-// console.log(drink.getKeys());
-// console.log(drink.getValue('name'));
-// console.log(drink.deleteValue('name'));
-// console.log(drink);
+let drinkStorage = new HashStorage;
+drinkStorage.addValue('Молочный коктейль', {алкогольный: "нет", рецепт: {молоко: 300, мороженое: 100, какао: 5, ванильныйСахар:5, банан: 150}});
+//console.log(drinkStorage.deleteValue('Молочный коктейль'));
+console.log(drinkStorage);

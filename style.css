@@ -1,0 +1,17 @@
+.btn {
+    display:block;
+    margin:10px;
+    width:300px;
+    background-color: #4169E1;
+    border: none;
+    padding:10px;
+    color:#fff;
+    text-transform: uppercase;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: #6181E1;
+}
+.text {
+    margin: 10px;
+}
